@@ -1,0 +1,29 @@
+﻿## Interface: 11302
+## Title: CoolLevelUp Classic
+## Version: 1.13.0.2
+## Authors: MrCool, humfras (Modified by mushroomyo)
+## Notes: Makes levelling up much more cooler 8)
+## Notes-frFR: Rend les "Level up" beaucoup plus sympas 8)
+## SavedVariables: CoolLevelUp_Database
+## Dependencies:
+## OptionalDeps:
+
+CoolLevelUp.xml
+
+data\localisation.lua
+data\database.lua
+data\sound.lua
+data\music.lua
+
+data\manager.lua
+data\trainer.lua
+
+gui\arrow.xml
+gui\levelUp.xml
+gui\header.xml
+gui\box.xml
+gui\spellBox.xml
+gui\hole.xml
+gui\spell.xml
+gui\grats.xml
+gui\engine.lua

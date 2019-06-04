@@ -1,0 +1,11 @@
+## Interface: 11302
+## Title: RealMobHealth v1.0
+## Version: 1.0
+## Author: SDPhantom
+
+## SavedVariables: RealMobHealth_CreatureHealthCache
+
+## Notes: MobHealth for Classic
+
+Core.lua
+BlizzardUI.lua

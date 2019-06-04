@@ -1,0 +1,231 @@
+Version 8.1:
+   Fixed display bugs with spell ranks. 
+   Until Blizzard has fixed the client, you need to load also the
+   Addon "Classic Spell Ranks", in order to have spell ranks info at all. 
+
+Version 8.0:
+   Released again to the public, because it works nicely with wow classic.
+
+Version 3.0:
+   Adapted to game version 3.0.3 and api changes  
+                                                
+Version 2.4.021:  
+   Changed : The default setting for using the cursor
+             keys has been changed.
+   Improved: Combat events are ignored for persons
+             who have left the group but are still
+             in the combat log list.
+   Bugfix  : Deathcounter was counting player
+             deaths twice.
+
+Version 2.4.020:  
+  Improved: Average for healing spells was calculated
+            after subtraction of overheal. This has
+            been changed to show the real potential
+            of the different healing spells.
+    New : New column "N". It shows how often a spell
+          has been used. Due to this change, YACL
+          will reset to defaults once you install
+          the new version.   
+    New : Automatic reset of combatlog when entering
+          an instance or arena.       
+    Bugfix: Removed an annoying sync error message.         
+
+Version 2.4.019:  
+    New : Added tooltip to show pet ownership in name
+          column.
+    New : Added tooltip to show percentage of pet
+          contribution relative to owner.     
+    New : Combat log reset requires confirmation.          
+    New : Spamming data requires confirmation.          
+
+
+Version 2.4.018:  
+    Bugfix: Calculations for "miss" and "block" values
+            were incorrect, results were too big.
+
+Version 2.4.017:  
+    New   : The minibars are now configurable. If you
+            leave the minibar setting on default,
+            they follow the main mode as before.
+            There is even a new mode called "D+H"
+            which will show the sum of damage and
+            healing done (something for the hybrid's
+            ego).
+    New   : Incoming damage includes also enviromental
+            damage like walking through lava or falling
+            damage.        
+
+Version 2.4.016:  
+    New   : Added HPS column and HPS title display.
+    Bugfix: Percentage calculations that included pet 
+            damage were wrong.
+    Improvement: Less memory garbage when creating sync
+            messages.
+            
+Version 2.4.015:  
+    Bugfix: Switching between delta and summary mode
+            was buggy. I did not work if you had some
+            other addons installed. 
+
+Version 2.4.014:  
+    Bugfix: The bugdevil himself disabled spamming into
+            the chat. This important function is fixed !
+    New   : It is possible to switch of sync completely.
+            Use "/yacl sync off/on" to do that.  
+    New   : In the settings menu you can define the title
+            display in minimized mode. So far you can 
+            choose Clock/Fight duration/DPS display.            
+
+Version 2.4.013:  
+    Improvement: Sync data is now send much more carefully.
+            Bandwith has been reduced further, and is 
+            controlled by ChatThrottleLib that is also 
+            part of ACE. No more disconnects ... 
+            Attention: YACL version 2.4.013 does not sync
+            with older versions. 
+    New   : The interface can be completely hidden. Use
+            the command "/yacl hide" and "/yacl show" to
+            do this.
+    Bugfix: Max values were rising on sync clients upon
+            local value reset.               
+    
+
+Version 2.4.012:  
+    Minor Bugfix: The new DoTs and Hots were not received
+                  by sync clients.
+
+Version 2.4.011:  
+    New   : DoTs and Hots are now properly separated from 
+            normal spells.This solves many problems like 
+            wrong average values.
+    New   : Minibars show also values.      
+    New   : Added tooltip for percentage values to show
+            the accuracy of the data.   
+    Bugfix: The "most annoying" YACL function was broken -
+            the "auto popup" after combat.         
+
+Version 2.4.010:  
+    New   : Here come all the fight details .. 
+            What I did wrong so far, was to only count
+            full physical misses. That was so *bites himself*.
+            Now we are counting all the little details ...
+
+Version 2.4.009:  
+    New   : Last fight mode versus summary mode
+    New   : YACL is producing a sound when you enter a new
+            fight. The sound can be disabled with the
+            command "/yacl sound off".
+    New   : Added glancing and dodge counters in detailed
+            view.        
+    Bugfix: Petdamage wasn't added correctly causing wrong
+            DPS and crit/misschance values 
+    Improved: I finally learned how to disable the layout
+              caching system. Hurray. This time, the 
+              windows should really stay in place :)    
+    Improved: Algorithm for DPS calculation.      
+
+Version 2.4.008:  
+    Improved: network code optimisations.
+    Improved: The icons were badly aligned after recent
+              changes in the texture code.
+    Improved: The settings frame was not colored correctly.    
+    Changed : Spamming reports is now done with one entry
+              per line. Only the top 10 entries will be
+              reported. Nevertheless you can now easily 
+              saturate your upload-limit with that.
+    Improved: Columns dynamically change width. Can be jumpy
+              when scrolling at the moment ...        
+                      
+Version 2.4.007:  
+    New : Whenever you join a group or a raid, the combat
+          log will reset automatically. That option
+          can be switched off with "/yacl autoreset off".
+          Default is ON. 
+    New : Settings dialog is implemented.      
+    Bug : The command "/yacl bars" without parameter
+          produced an error. Sorry.
+    Bug : The wrong column was selected on startup.      
+    Improved : The slash commands all work also without
+               parameters.              
+    Improved : Changed text alignment in grid to make
+               it more readable.                       
+
+Version 2.4.006:  
+    New : the mini bargraph now shows damage/healing 
+          outgoing/incoming according to the main windows 
+          settings
+    New : You can change the maximum amount of bars with the 
+          slashcommand "/yacl bars n" (with n=[0..20])
+    Improved: New artwork for the mini bargraphs
+    Bugfix  : windows finally stay where the user placed them.
+
+Version 2.4.005:  
+    Bug : major typo caused wrong sync values.
+
+Version 2.4.004:  
+    New: "auto hide" option can be changed via
+         slash commands. Default is ON.
+    New: "auto show" option can be changed via
+         slash commands. Default is OFF.
+    New: If not assigned otherwise, YACL will
+         assign the key ^ to open the big window.
+    New: In minimized mode, you will see the
+         top 10 damage dealers as bargraph. 
+         Very much like the classic old damagemeter. 
+
+
+Version 2.4.003:  
+    Bugfix : counting too many misses (dodged is not a miss)
+    Bugfix : it was impossible to leave the detailed view
+             if it was empty.
+
+Version 2.4.002:  
+    YACL is now properly tracking totems.
+    Big window is closing upon "right click", so it is auto-
+    matically closing if you want to interact with something 
+    behind it (like looting).
+    Added some artwork for the background
+
+Version 2.4.001:  
+    I hoped for a bugfix in the combat log system - it did not come.
+    So here comes the workaround for proper death counting.
+    Using the cursor keys to scroll in the sheet is now an option.
+    Change the option with /yacl cursor on/off
+    Fixed texture positions bug
+    Spamming reports into chat window is implemented
+
+Version 2.4:  
+    Removed an spamming debug output
+
+Version 2.4.5: (Prerelease)
+    Fixed minor taint issues  (no taint at all now)
+    Adjusted max message length to avoid server disconnect
+    Fixed slider colors
+
+Version 2.4.4: (Prerelease)
+    Bugfix for synchronisation of crushing counter
+    Bugfix for death counter
+    added DAMAGE_SHIELDS (Thorns etc)
+    Graphics for sliders are implemented
+    Bugfix for wrong window size when switching between chars.
+
+Version 2.4.3: (Prerelease)
+    Implemented the artwork for hunter pets ,warlock deamons 
+    and mage elementals.
+    Rogue icon was not functional
+    Petdamage is now added to the owners totals. Nevertheless
+    the pet is still shown so everbody can see the contribution
+    of the pet.
+    Pets are a little bit grayed out in the overview.
+
+Version 2.4.2: (Prerelease)
+    Fixed a startup graphic bug
+    Druid icon was not functional
+
+Version 2.4.1: (Prerelease)
+    Improved internal party member handling
+    Implemented vertical scrolling, although sliders are still missing
+
+Version 2.4: (Prerelease)
+    First released version.

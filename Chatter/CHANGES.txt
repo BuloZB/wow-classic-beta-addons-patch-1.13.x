@@ -1,0 +1,10 @@
+tag 57cde2fb369279a990d013f3b8f4723499531b5b 1.5.8
+Author:	Benjamin Staneck <staneck@gmail.com>
+Date:	Fri Aug 10 05:26:58 2018 +0200
+
+commit a686667e920b386aeb7d1b4787e7f5b634b5c22e
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Fri Aug 10 05:26:41 2018 +0200
+
+    fix channel colors module as well
+

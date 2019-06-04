@@ -1,0 +1,11 @@
+## Interface: 80100
+## Title: YACL
+## Version: 8.1
+## Notes: YACL is a damagemeter, that sums up in detail all outgoing and incoming damage as well as healing
+## X-Website: http://www.curse.com/downloads/details/11678/
+## Author: Olaf Reusch
+## SavedVariables:
+## SavedVariablesPerCharacter: yacl_database,yacl_global_settings
+## OptionalDeps:
+## Dependencies:
+YACL.xml

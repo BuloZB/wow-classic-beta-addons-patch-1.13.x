@@ -1,0 +1,377 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+    <Frame name="YACLSettingsFrame" parent="YACLOptionsFrame" hidden="true" toplevel="true" inherits="YACL_FrameTemplate" >
+        <Size>
+            <AbsDimension x="128" y="318"/>
+        </Size>
+        <Anchors>
+            <Anchor point="TOPRIGHT" RelativePoint="TOPLEFT">
+                <Offset>
+                    <AbsDimension x="0" y="0"/>
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Scripts>
+            <OnLoad>
+                yacl_frame_template_on_load(self);
+                yacl.m_settings_frame=self;
+                self:SetClampedToScreen( true );
+                self:SetFrameLevel(self:GetParent():GetFrameLevel()+2);
+                getglobal("YACL_VERSION_DISPLAY"):SetText(GetAddOnMetadata("YACL","Version"));
+                tinsert(UISpecialFrames,"YACLSettingsFrame");
+            </OnLoad>
+        </Scripts>
+
+        <Layers>
+            <Layer level="ARTWORK">
+                <FontString inherits="GameFontNormal" text="Cursor Keys" justifyH="LEFT">
+                    <Size>
+                        <AbsDimension x="90" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="40" y="-45"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString inherits="GameFontNormal" text="Auto hide" justifyH="LEFT">
+                    <Size>
+                        <AbsDimension x="90" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="40" y="-75"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString inherits="GameFontNormal" text="Auto show" justifyH="LEFT">
+                    <Size>
+                        <AbsDimension x="90" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="40" y="-105"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString inherits="GameFontNormal" text="Auto reset" justifyH="LEFT">
+                    <Size>
+                        <AbsDimension x="90" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="40" y="-135"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString inherits="GameFontNormal" text="Sound" justifyH="LEFT">
+                    <Size>
+                        <AbsDimension x="90" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="40" y="-165"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="YACL_VERSION_DISPLAY" inherits="GameFontNormalSmall" text="" justifyH="CENTER">
+                    <Size>
+                        <AbsDimension x="90" y="20"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="BOTTOM" relativePoint="BOTTOM">
+                            <Offset>
+                                <AbsDimension x="0" y="4"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+
+        <Frames>
+
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+        
+             <Frame name="YACL_TitleDropDownMenu" inherits="UIDropDownMenuTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+                <Scripts>
+                    <OnLoad>
+                        UIDropDownMenu_Initialize(self, Yacl_TitleDropDownMenu_OnLoad, "MENU");
+                    </OnLoad>
+                </Scripts>
+            </Frame>
+           
+
+            <Button name="YACL_TitleDropDownMenuButton">
+                <Size>
+                    <AbsDimension x="108" y="32"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-10"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <ButtonText inherits="GameFontNormal" />
+                <NormalTexture inherits="UIPanelButtonUpTexture"/>
+                <PushedTexture inherits="UIPanelButtonDownTexture"/>
+                <DisabledTexture inherits="UIPanelButtonDisabledTexture"/>
+                <HighlightTexture inherits="UIPanelButtonHighlightTexture"/>
+                <Scripts>
+                    <OnLoad>
+                        yacl.YACL_OBTN_TITLE=self;
+                        self:SetHeight(32);
+                    </OnLoad>
+                    <OnClick>
+                        Yacl_TitleDropDownMenuButton_OnClick();
+                    </OnClick>
+                    <OnEnter>
+                       GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+                       GameTooltip:SetText("What to display in the\ntitle when minimized.");
+                    </OnEnter>
+                    <OnLeave>
+                       GameTooltip:Hide();
+                    </OnLeave>
+                </Scripts>
+            </Button>
+
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+
+            <Frame name="YACL_BarsDropDownMenu" inherits="UIDropDownMenuTemplate" id="1">
+               <Anchors>
+                   <Anchor point="TOP">
+                       <Offset>
+                           <AbsDimension x="0" y="0"/>
+                       </Offset>
+                   </Anchor>
+               </Anchors>
+               <Scripts>
+                   <OnLoad>
+                       UIDropDownMenu_Initialize(self, Yacl_BarsDropDownMenu_OnLoad, "MENU");
+                   </OnLoad>
+               </Scripts>
+           </Frame>
+
+            <Button name="YACL_BarsDropDownMenuButton">
+                <Size>
+                    <AbsDimension x="108" y="32"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="20"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <ButtonText inherits="GameFontNormal" />
+                <NormalTexture inherits="UIPanelButtonUpTexture"/>
+                <PushedTexture inherits="UIPanelButtonDownTexture"/>
+                <DisabledTexture inherits="UIPanelButtonDisabledTexture"/>
+                <HighlightTexture inherits="UIPanelButtonHighlightTexture"/>
+                <Scripts>
+                    <OnLoad>
+                        yacl.YACL_OBTN_BARS=self;
+                        self:SetHeight(32);
+                    </OnLoad>
+                    <OnClick>
+                        Yacl_BarsDropDownMenuButton_OnClick();
+                    </OnClick>
+                    <OnEnter>
+                       GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+                       GameTooltip:SetText("What to display in the\nmini-bargraph display");
+                    </OnEnter>
+                    <OnLeave>
+                       GameTooltip:Hide();
+                    </OnLeave>
+                </Scripts>
+            </Button>
+
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+
+            <CheckButton name="YACL_OBTN_CURSOR" inherits="YACLCheckButtonTemplate" >
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-40"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                      self.ToolTipText="Hijack the cursor keys to scroll in the grid ?";
+                      yacl.YACL_OBTN_CURSOR=self;
+                    </OnLoad>
+                    <OnClick>
+                        yacl_global_settings.m_use_cursor_keys=not yacl_global_settings.m_use_cursor_keys;
+                        yacl:setup_settings_frame();
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+        
+            
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+            
+
+
+            <CheckButton name="YACL_OBTN_AUTOHIDE" inherits="YACLCheckButtonTemplate" >
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-70"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                      self.ToolTipText="Auto-hide when char moves ?";
+                      yacl.YACL_OBTN_AUTOHIDE=self;
+                    </OnLoad>
+                    <OnClick>
+                        yacl_global_settings.m_auto_hide=not yacl_global_settings.m_auto_hide;
+                        yacl:setup_settings_frame();
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+            
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+
+            <CheckButton name="YACL_OBTN_AUTOSHOW" inherits="YACLCheckButtonTemplate" >
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-100"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                      self.ToolTipText="Auto-restore size after combat ?";
+                      yacl.YACL_OBTN_AUTOSHOW=self;
+                    </OnLoad>
+                    <OnClick>
+                        yacl_global_settings.m_auto_show=not yacl_global_settings.m_auto_show;
+                        yacl:setup_settings_frame();
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+
+            <CheckButton name="YACL_OBTN_AUTORESET" inherits="YACLCheckButtonTemplate" >
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-130"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                      self.ToolTipText="Auto-reset when joining groups/raids ?";
+                      yacl.YACL_OBTN_AUTORESET=self;
+                    </OnLoad>
+                    <OnClick>
+                        yacl_global_settings.m_auto_reset=not yacl_global_settings.m_auto_reset;
+                        yacl:setup_settings_frame();
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+
+            <CheckButton name="YACL_OBTN_AUDIO" inherits="YACLCheckButtonTemplate" >
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-160"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                      self.ToolTipText="Use sounds ?";
+                      yacl.YACL_OBTN_AUDIO=self;
+                    </OnLoad>
+                    <OnClick>
+                        yacl_global_settings.m_use_sounds=not yacl_global_settings.m_use_sounds;
+                        yacl:setup_settings_frame();
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+
+            <Slider name="YACL_BARS_SLIDER" inherits="OptionsSliderTemplate">
+                <Size>
+                    <AbsDimension x="100" y="16"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="14" y="-235"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        yacl.YACL_BARS_SLIDER=self;
+
+                        local name="YACL_BARS_SLIDER"
+                        local text=name.."Text";
+                        local high=name.."High";
+                        local low =name.."Low";
+					    getglobal(text):SetText("Mini-bars");
+					    getglobal(high):SetText("20");
+					    getglobal(low):SetText("Off");
+					    self:SetMinMaxValues(0,20);
+					    self:SetValueStep(1);
+                    </OnLoad>
+                    <OnValueChanged>
+                        yacl_global_settings.m_anz_bars=self:GetValue();
+                        yacl:setup_settings_frame();
+                    </OnValueChanged>
+                </Scripts>
+            </Slider>
+
+
+        </Frames>
+    </Frame>
+
+
+</Ui>
+

@@ -1,0 +1,10 @@
+## Interface: 11302
+## Title: Move Pad Plus - Classic!
+## Notes: Several additional movement buttons for Move Pad.
+## Author: Fizzlemizz
+## Version: 8.1.0
+## SavedVariables: MovePadPlus
+
+DropList Template.lua
+Config.lua
+MovePadPlus.lua

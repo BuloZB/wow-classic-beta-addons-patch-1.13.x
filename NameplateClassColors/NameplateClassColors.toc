@@ -1,0 +1,5 @@
+## Interface: 11302
+## Version: 1.0
+## Title: NameplateClassColors
+
+NameplateClassColors.lua

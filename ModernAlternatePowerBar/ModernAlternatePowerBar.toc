@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: Modern AlternatePowerBar
+## Version: 1.0
+## Author: SDPhantom
+
+## Notes: Port of Blizzard's AlternatePowerBar to Classic
+
+AlternatePowerBar.lua

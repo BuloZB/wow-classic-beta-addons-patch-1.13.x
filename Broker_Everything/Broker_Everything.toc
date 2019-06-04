@@ -1,0 +1,27 @@
+## Interface: 80100
+## Title: Broker: Everything - Classic
+## Notes: A collection of modules to display various informations as Broker-buttons on Broker Display AddOns or minimap buttons.
+## Author: Hizuro, Ekaterina, Hungtar
+## Version: 3.5.15-release
+## SavedVariables: Broker_Everything_ProfileDB, Broker_Everything_DataDB, Broker_Everything_CharacterDB, Broker_Everything_AceDB
+## OptionalDeps: LibStub, CallbackHandler-1.0, LibSharedMedia-3.0, LibDataBroker-1.1, LibDBIcon-1.0, LibQTip-1.0, LibColors-1.0, LibRealmInfo, LibTime-1.0, Ace3, LibDropDownMenu
+## X-WoWI-ID: 24973
+
+#@no-lib-strip@
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+libs\AceDB-3.0\AceDB-3.0.xml
+libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+libs\AceGUI-3.0\AceGUI-3.0.xml
+libs\AceConfig-3.0\AceConfig-3.0.xml
+libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+libs\LibQTip-1.0\LibQTip-1.0.lua
+libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+libs\LibColors-1.0\LibColors-1.0.xml
+libs\LibTime-1.0\LibTime-1.0.xml
+libs\LibDropDownMenu\LibDropDownMenu.xml
+libs\LibRealmInfo\LibRealmInfo.lua
+#@end-no-lib-strip@
+
+Broker_Everything.xml

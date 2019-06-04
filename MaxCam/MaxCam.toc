@@ -1,0 +1,18 @@
+## Interface: 11302
+## Version: v2.3.0
+## Title: MaxCam
+## Notes: Max Zoom Distance for Classic
+## Author: Ketho @ EU-Boulderfist
+## SavedVariables: MaxCamDB
+
+#@no-lib-strip@
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
+#@end-no-lib-strip@
+
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+
+Locales.lua
+MaxCam.lua

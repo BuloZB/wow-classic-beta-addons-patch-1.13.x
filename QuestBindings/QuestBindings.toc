@@ -1,0 +1,6 @@
+## Interface: 11302
+## Title: QuestBindings
+## Notes: Binds keys 1-9 to important elements of the quest pickup and turn-in windows and gossip frames.
+## Author: Gello
+## Version 1.0.6-classic
+QuestBindings.lua

@@ -1,0 +1,376 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+    <!-- ****************************************************************  -->
+    <!-- yacl main frame                                                -->
+    <!-- ****************************************************************  -->
+
+    <Frame name="YACLTimer" parent="UIParent" hidden="false" >
+        <Scripts>
+            <OnUpdate>
+                yacl:on_update();
+            </OnUpdate>
+        </Scripts>
+    </Frame>
+
+    <Frame name="YACLMainFrame" parent="UIParent" hidden="false" movable="true" resizable="true" toplevel="false" frameStrata="LOW" enableMouse="true">
+        <Size>
+            <AbsDimension x="300" y="256"/>
+        </Size>
+
+        <Anchors>
+            <Anchor point="TOPRIGHT">
+                <Offset>
+                    <AbsDimension x="-100" y="-100"/>
+                </Offset>
+            </Anchor>
+        </Anchors>
+
+        <Layers>
+            <Layer level="BACKGROUND">
+
+                <Texture name="YACL_TC1" file="Interface\Addons\yacl\Textures\yacl_mainframe">
+                    <Anchors>
+                        <Anchor point="TOPLEFT"/>
+                    </Anchors>
+                </Texture>
+
+                <Texture  name="YACL_TC2" file="Interface\Addons\yacl\Textures\yacl_mainframe">
+                    <Anchors>
+                        <Anchor point="TOPRIGHT"/>
+                    </Anchors>
+                </Texture>
+
+                <Texture name="YACL_TC3" file="Interface\Addons\yacl\Textures\yacl_mainframe">
+                    <Anchors>
+                        <Anchor point="BOTTOMLEFT"/>
+                    </Anchors>
+                </Texture>
+
+                <Texture name="YACL_TC4" file="Interface\Addons\yacl\Textures\yacl_mainframe">
+                    <Anchors>
+                        <Anchor point="BOTTOMRIGHT"/>
+                    </Anchors>
+                </Texture>
+
+                <Texture name="YACL_TS1" file="Interface\Addons\yacl\Textures\yacl_mainframe">
+                    <Anchors>
+                        <Anchor point="LEFT"/>
+                    </Anchors>
+                </Texture>
+
+                <Texture name="YACL_TS2" file="Interface\Addons\yacl\Textures\yacl_mainframe">
+                    <Anchors>
+                        <Anchor point="RIGHT"/>
+                    </Anchors>
+                </Texture>
+
+                <Texture name="YACL_TS3" file="Interface\Addons\yacl\Textures\yacl_mainframe">
+                    <Anchors>
+                        <Anchor point="TOP"/>
+                    </Anchors>
+                </Texture>
+
+                <Texture name="YACL_TS4" file="Interface\Addons\yacl\Textures\yacl_mainframe">
+                    <Anchors>
+                        <Anchor point="BOTTOM"/>
+                    </Anchors>
+                </Texture>
+
+                <Texture name="YACL_CENTER" file="Interface\Addons\yacl\Textures\iron_angel">
+                    <Anchors>
+                        <Anchor point="CENTER"/>
+                    </Anchors>
+                </Texture>
+
+                <FontString name="YACL_TITLE" inherits="GameFontNormal" text="YACL" justifyH="CENTER" justifyV="CENTER">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="32" y="-4"/>
+                            </Offset>
+                        </Anchor>
+                        <Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT">
+                            <Offset>
+                                <AbsDimension x="-32" y="-28"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+
+
+            </Layer>
+        </Layers>
+
+
+        <Scripts>
+            <OnLoad>
+                yacl:on_load_mainframe(self);
+            </OnLoad>
+            <OnDragStart>
+                yacl:on_drag_start_mainframe(self);
+            </OnDragStart>
+            <OnDragStop>
+                yacl:on_drag_stop_mainframe(self);
+            </OnDragStop>
+            <OnSizeChanged>
+                yacl:on_size_changed(self);
+                grid.on_show(yacl.m_grid);
+            </OnSizeChanged>
+            <OnEvent>
+                yacl:on_event(self,event,...);
+            </OnEvent>
+            <OnUpdate>
+                yacl:on_update_view();
+            </OnUpdate>
+        </Scripts>
+
+
+        <!-- ****************************************************************  -->
+        <!-- childs of main frame                                              -->
+        <!-- ****************************************************************  -->
+
+        <Frames>
+
+            <!-- ****************************************************************  -->
+            <!-- vertical slider                                                   -->
+            <!-- ****************************************************************  -->
+
+            <Slider name="YACL_V_SLIDER" hidden="false" orientation="VERTICAL" enableMouse="true" minValue="0" maxValue="1" valueStep="1" defaultValue="0">
+                <Anchors>
+                    <Anchor point="TOPLEFT"     relativeTo="YACL_TS2" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="4" y="-1"/>
+                        </Offset>
+                    </Anchor>
+                    <Anchor point="BOTTOMRIGHT" relativeTo="YACL_TS2" relativePoint="BOTTOMRIGHT">
+                        <Offset>
+                            <AbsDimension x="-6" y="1"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <ThumbTexture name="$parentThumb" file="INTERFACE\ADDONS\YACL\TEXTURES\YACL_SLIDER">
+                    <Size>
+                        <AbsDimension x="21" y="21"/>
+                    </Size>
+                </ThumbTexture>
+                <Scripts>
+                    <OnValueChanged>
+                        grid.v_scroll_set(yacl.m_grid,self:GetValue());
+                    </OnValueChanged>
+                </Scripts>
+            </Slider>
+
+
+            <!-- ****************************************************************  -->
+            <!-- horizontal slider                                                 -->
+            <!-- ****************************************************************  -->
+
+            <Slider name="YACL_H_SLIDER" hidden="false" orientation="HORIZONTAL" enableMouse="true" minValue="0" maxValue="1" valueStep="1" defaultValue="0">
+                <Anchors>
+                    <Anchor point="TOPLEFT"     relativeTo="YACL_TS4" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="1" y="-4"/>
+                        </Offset>
+                    </Anchor>
+                    <Anchor point="BOTTOMRIGHT" relativeTo="YACL_TS4" relativePoint="BOTTOMRIGHT">
+                        <Offset>
+                            <AbsDimension x="-1" y="6"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <ThumbTexture name="$parentThumb" file="INTERFACE\ADDONS\YACL\TEXTURES\YACL_SLIDER">
+                    <Size>
+                        <AbsDimension x="21" y="21"/>
+                    </Size>
+                </ThumbTexture>
+                <Scripts>
+                    <OnValueChanged>
+                        grid.h_scroll_set(yacl.m_grid,self:GetValue());
+                    </OnValueChanged>
+                </Scripts>
+            </Slider>
+
+
+            <!-- ****************************************************************  -->
+            <!-- options button, topleft                                           -->
+            <!-- ****************************************************************  -->
+
+            <Button name="YACL_OPTIONS_BTN" hidden="false" >
+                <Size>
+                    <AbsDimension x="20" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="7.5" y="-7.5"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <NormalTexture file="INTERFACE\ADDONS\YACL\TEXTURES\BALL32_OPTIONS"/>
+                <HighlightTexture file="INTERFACE\ADDONS\YACL\TEXTURES\BALL32_GLOW" alphaMode="ADD"/>
+                <Scripts>
+                    <OnClick>
+                        yacl:on_toggle_options();
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <!-- ****************************************************************  -->
+            <!-- minimize button, topright                                           -->
+            <!-- ****************************************************************  -->
+
+            <Button name="YACL_MINIMIZE_BTN" hidden="false" >
+                <Size>
+                    <AbsDimension x="20" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+                        <Offset>
+                            <AbsDimension x="-7.5" y="-7.5"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <NormalTexture file="INTERFACE\ADDONS\YACL\TEXTURES\BALL32_MINIMIZE"/>
+                <HighlightTexture file="INTERFACE\ADDONS\YACL\TEXTURES\BALL32_GLOW" alphaMode="ADD"/>
+                <Scripts>
+                    <OnClick>
+                        yacl:set_minimized_mode();
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <!-- ****************************************************************  -->
+            <!-- sizer button 1, bottomleft                                           -->
+            <!-- ****************************************************************  -->
+
+            <Button name="YACL_SIZER_BTN1" hidden="false" >
+                <Size>
+                    <AbsDimension x="20" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+                        <Offset>
+                            <AbsDimension x="7.5" y="7.5"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <NormalTexture file="INTERFACE\ADDONS\YACL\TEXTURES\BALL32"/>
+                <HighlightTexture file="INTERFACE\ADDONS\YACL\TEXTURES\BALL32_GLOW" alphaMode="ADD"/>
+                <Scripts>
+                    <OnMouseUp>
+                            yacl:on_drag_stop_mainframe(self:GetParent());
+                    </OnMouseUp>
+                    <OnMouseDown>
+                            if (button == "LeftButton") then
+                                yacl:on_resize_start_mainframe(self:GetParent(),"BOTTOMLEFT");
+                            end
+                    </OnMouseDown>
+                    <OnHide>
+                        yacl:on_drag_stop_mainframe(self:GetParent());
+                    </OnHide>
+                </Scripts>
+            </Button>
+
+            <!-- ****************************************************************  -->
+            <!-- sizer button 2, bottomright                                         -->
+            <!-- ****************************************************************  -->
+
+            <Button name="YACL_SIZER_BTN2" hidden="false" >
+                <Size>
+                    <AbsDimension x="20" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+                        <Offset>
+                            <AbsDimension x="-7.5" y="7.5"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <NormalTexture file="INTERFACE\ADDONS\YACL\TEXTURES\BALL32"/>
+                <HighlightTexture file="INTERFACE\ADDONS\YACL\TEXTURES\BALL32_GLOW" alphaMode="ADD"/>
+                <Scripts>
+                    <OnMouseUp>
+                            yacl:on_drag_stop_mainframe(self:GetParent());
+                    </OnMouseUp>
+                    <OnMouseDown>
+                            if (button == "LeftButton") then
+                                yacl:on_resize_start_mainframe(self:GetParent(),"BOTTOMRIGHT");
+                            end
+                    </OnMouseDown>
+                    <OnHide>
+                        yacl:on_drag_stop_mainframe(self:GetParent());
+                    </OnHide>
+                </Scripts>
+            </Button>
+
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+
+            <Frame name="YACL_Grid" hidden="false" movable="true" toplevel="true" frameStrata="LOW" enableMouse="true">
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="8" y="-34"/>
+                        </Offset>
+                    </Anchor>
+                    <Anchor point="BOTTOMRIGHT">
+                        <Offset>
+                            <AbsDimension x="-34" y="34"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+
+                <Scripts>
+                    <OnLoad>
+                        grid.on_load(yacl.m_grid,self);
+                    </OnLoad>
+                    <OnShow>
+                        grid.on_show(yacl.m_grid);
+                    </OnShow>
+                    <OnMouseDown>
+                        grid.on_mouse_down(yacl.m_grid);
+                    </OnMouseDown>
+                    <OnMouseUp>
+                        grid.on_mouse_up(yacl.m_grid);
+                    </OnMouseUp>
+                    <OnUpdate>
+                        grid.on_update(yacl.m_grid);
+                    </OnUpdate>
+                    <OnMouseDown>
+                       yacl_switch_to_global_view(yacl.m_grid,nil,nil,button);
+                    </OnMouseDown>
+                </Scripts>
+            </Frame>
+
+            <!-- ****************************************************************  -->
+            <!--                                                                   -->
+            <!-- ****************************************************************  -->
+
+            <Frame inherits="YACL_CombatSliderTemplate" id="1"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="2"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="3"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="4"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="5"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="6"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="7"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="8"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="9"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="10"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="11"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="12"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="13"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="14"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="15"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="16"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="17"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="18"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="19"/>
+            <Frame inherits="YACL_CombatSliderTemplate" id="20"/>
+
+        </Frames>
+
+    </Frame>
+</Ui>
+

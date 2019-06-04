@@ -1,0 +1,12 @@
+<Bindings>
+    <Binding name="YACLRESET" header="YACL"> yacl:on_reset_combatlog(); </Binding>
+    <Binding name="YACLTOGGLE"> yacl:set_minimized_mode(); </Binding>
+    <Binding name="YACLDETAILS"> yacl:toggle_detail_mode(); </Binding>
+
+    <Binding name="YACLCURSORDOWN">  yacl:cursor_down(); </Binding>
+    <Binding name="YACLCURSORUP">    yacl:cursor_up(); </Binding>
+    <Binding name="YACLCURSORLEFT">  yacl:cursor_left(); </Binding>
+    <Binding name="YACLCURSORRIGHT"> yacl:cursor_right(); </Binding>
+
+
+</Bindings>

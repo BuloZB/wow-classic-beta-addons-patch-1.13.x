@@ -1,0 +1,179 @@
+05/25/2019 version 2.6.0-classic
+- Update for classic beta client
+- Removed toys and mount functionality
+
+12/24/2018 version 2.5.2
+- If "UberTooltips" cvar is disabled, then all additional tooltip info from Select is no longer added
+- Added option "Don't Add Macro To Tooltip" in interface options to not append macro tooltips with the /select command used in the macro
+- Updated toc for 8.1 patch
+
+08/26/2018 version 2.5.1
+- Added mount:aquatic (and mount:favaquatic) keywords to select aquatic mounts (water striders, seahorses, etc)
+
+07/01/2018 version 2.5.0
+- NOTE: This version is for Battle for Azeroth only
+- Updated for Battle for Azeroth
+
+02/07/2018 version 2.4.13
+- Fix for mount m:<mountID|spellID> filter
+
+02/07/2018 version 2.4.12
+- Optimized mount filters
+
+01/21/2018 version 2.4.11
+- Fix for potential mini lockup if you have many select macros and enter combat for the first time: unused flyouts are created over time after login instead of all at once as you enter combat for the first time.
+- Fix for search in the ToyBox not working while Select is enabled.
+- Fix for toys not found when newer filters (expansions, unusuable) hiding them.
+
+08/29/2017 version 2.4.10
+- toc update for 7.3 patch
+
+04/24/2017 version 2.4.9
+- A better fix for icons reverting to a red question mark.
+
+04/09/2017 version 2.4.8
+- Fix for icons reverting to a red question mark when zoning. (Let me know if any are still experiencing this; could be some timing issue involved too.)
+
+03/28/2017 version 2.4.7
+- Fix for other addons putting non-strings into UISpecialFrames. ಠ_ಠ
+- toc update for 7.2 patch
+
+10/24/2016 version 2.4.6
+- toc update for 7.1 patch
+
+6/4/2016 version 2.4.5
+- Fix for attempt to cache empty bag slots.
+- Fix for not all spell tabs checked in spell filters.
+- Fix for mount:spellID filters
+
+5/27/16 version 2.4.4
+- Fix for Cooldown_SetTimer renamed to Cooldown_Set
+
+5/17/16 version 2.4.3
+- Fix for Legion mount API changes
+
+5/14/16 version 2.4.2
+- Fix for cold login issues: toys not being cached, macro icons not initialized properly and lua error
+
+5/13/16 version 2.4.1
+- Fix for source filters getting unchecked on login and when toys change
+
+5/13/16 version 2.4.0
+- toc update for 7.0 Legion Beta
+- Fix for renamed toybox API calls
+- Fix for cooldown anchors going bonkers
+
+3/17/16 version 2.3.13
+- mount:<number> (or m:<number>) will add a mount by spellID
+- Fix for lua error when flyout is empty and action button undefined
+- Fix for lua error when flyout is a single number
+
+12/22/15 version 2.3.12
+- Fix for specific keywords not doing an exact match, causing mount:land to only list favorite land mounts (and mount:flying to list only favorite flying mounts)
+
+11/29/15 version 2.3.11
+- Fix for mount filters that don't match their spell name (ie chauffeured mekgineer's chopper vs summon chauffeur)
+
+6/22/15 version 2.3.10
+- toc update for 6.2
+
+3/30/15 version 2.3.9
+- Fix for spells with colons in their name (like Power Word: Shield, Teleport: Moonglade)
+
+2/28/15 version 2.3.8
+- Fix for toy sources being cleared on login
+
+2/24/15 version 2.3.7
+- toc update for 6.1
+
+10/31/14 version 2.3.6
+- Fix for toy searches failing after zoning (removed cache wipe)
+- Removed checks for WoD client
+
+10/14/14 version 2.3.5
+- 6.0 patch
+
+9/30/14 version 2.3.4
+- Flyouts removed from UISpecialFrames on entering combat, prohibited from joining UISpecialFrames during combat
+
+9/30/14 version 2.3.3
+- moved copying of flyout->action attributes from unsecure OnAttributeChanged to secure state driver snippet
+
+9/23/14 version 2.3.2
+- Toybox item support toy:favorite,any,partial search:keyword
+
+9/4/14 version 2.3.1,
+- Fix for lua error when attempting to show tooltip of a spell no longer known
+
+8/29/14 version 2.3.0,
+- Rewrite
+- All /selects are state-driven
+- Searches case insensitive
+- Options panel reworked
+- Full WoD mount support
+
+7/21/14 version 2.2.0,
+- Initial fixes for WoD beta
+
+unreleased version 2.1.6,
+- made index,actionType local in Select_Menu.lua SetAction hooksecurefunc
+
+2/23/14 version 2.1.5,
+- Fix for handling of invalid/missing [condition]als
+
+2/20/14 version 2.1.4,
+- Fix for hyphenated item:searches
+
+1/14/14 version 2.1.3,
+- Fix for mounts not completely loading on login
+
+12/26/13 version 2.1.2,
+- Frames join UISpecialFrames only when they're shown (out of combat)
+
+9/11/13 version 2.1.1,
+- toc update for 5.4
+
+6/22/13 version 2.1.0,
+- State driver added
+- Flyouts indexed by their list instead of their macro
+- DontSelectWithAlt option
+- Item cache added
+
+5/19/13 version 2.0.13,
+- toc update
+- summonpet works in combat
+- Menus at top of screen grow downward
+
+5/5/13 version 2.0.12,
+- Added mount:favorites filter if Select Favorite Mounts loaded
+
+4/18/13 version 2.0.11,
+- BAG_UPDATE unregistered if all menus populated
+- Added Select_PerCharacter_Settings to restore initial actions to last attributes
+- Removed profiling tools
+
+4/06/13 version 2.0.10,
+- Removed G_PetRoster
+- Added profiling tools
+
+3/28/13 version 2.0.9,
+- Removed internal pet system
+- Added G_PetRoster
+
+2/18/13 version 2.0.8,
+- Added macrotext support
+- Centralized timer system
+- Internal pet system
+
+1/26/13 version 2.0.7,
+- Added tooltips to /select macros
+
+9/23/12 version 2.0.6,
+- Added nil,1 to GetItemCount in parent:OnShow
+- Added throttled UpdateMacroIcons on BAG_UPDATE, PLAYER_EQUIPMENT_CHANGED
+
+9/21/12 version 2.0.5,
+- Rewrite release
+
+11/08/08 version 1.0.0,
+- Initial release

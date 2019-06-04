@@ -1,0 +1,45 @@
+## Interface: 11302
+## Title: MyRolePlay Classic
+## Version: 1.13.0.2
+## Author: Etarna Moonshyne, Katorie
+## Email: etarna@moonshyne.org, katorahooves@gmail.com
+## Notes: Share and create roleplaying profiles.|n|cffFF0000**Compatible only with Classic World of Warcraft.**|r
+## SavedVariables: mrpNotes, mrpLastViewedChangeLogBuild
+## SavedVariablesPerCharacter: mrpSaved, mdbSaved
+MyRolePlay.lua
+LibMSP\LibMSP.xml
+BlueBugs\BlueBugs.xml
+Locale.lua
+Locale_enGB.lua
+Locale_enUS.lua
+Locale_itIT.lua
+Locale_frFR.lua
+Options.lua
+Profile.lua
+Utilities.lua
+FormChange.lua
+TRP_data_iconList.lua
+TRP_data_musicList.lua
+TRP_data_imageList.lua
+UI_IconSelector.lua
+UI_MusicSelector.lua
+UI_ImageSelector.lua
+Predictive.lua
+Exchange.lua
+ID.lua
+Update.lua
+UI_Display.lua
+UI_Editor.lua
+UI_EditFrames.lua
+UI_Tab.lua
+UI_Browser.lua
+UI_GlancePreview.lua
+UI_PrivateNotes.lua
+UI_Tooltip.lua
+UI_Button.lua
+UI_Target.lua
+UI_Options.lua
+UI_ChangeLog.lua
+ChatName.lua
+Command.lua
+Init.lua

@@ -1,0 +1,24 @@
+tag 3db1ae097889c0283b2e4c714e7bfc58948aa198 3.5.15-release
+Author:	Hizuro <hizuro@gmx.net>
+Date:	Sun Jan 27 03:18:15 2019 +0100
+
+Tagging as 3.5.15-release
+
+commit 7369c1d7d34889f56c0017a214df95f992b23ea0
+Author: Hizuro <hizuro@gmx.net>
+Date:   Sun Jan 27 03:17:19 2019 +0100
+
+    durability: minor change to fix problem reported in comment #466
+
+commit 367d10839022512a17b2ff9b0061317d4f244c79
+Author: Hizuro <hizuro@gmx.net>
+Date:   Sun Jan 27 03:15:59 2019 +0100
+
+    gps: some changes to detect toys for transport menu
+
+commit f371936c30698dc6f25d98632d001788a617c98c
+Author: Hizuro <hizuro@gmx.net>
+Date:   Sun Jan 27 00:55:37 2019 +0100
+
+    professions: remove debug code
+

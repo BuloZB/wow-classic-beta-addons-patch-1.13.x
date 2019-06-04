@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: MapCoords v1.4
+## Version: 1.4
+## Author: SDPhantom
+
+## Notes: Coordinate AddOn that displays on the Minimap.
+
+MapCoords.lua

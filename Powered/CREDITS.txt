@@ -1,0 +1,2 @@
+Thanks to "ZPerl Unit Frames" addon for this bar skin! :) https://mods.curse.com/addons/wow/zperl
+- XPerl_StatusBars

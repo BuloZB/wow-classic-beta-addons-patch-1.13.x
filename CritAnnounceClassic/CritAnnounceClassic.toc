@@ -1,0 +1,9 @@
+## Interface: 11302
+## Title: CritAnnounce Classic
+## Title-deDE: BÄM Mod Classic
+## Notes: Announces critical damage and heals; either for yourself or for everyone in your desired chat
+## Notes-deDE: Einfach BÄM!
+## Author: Cuddlypanda
+## Version: 1.1
+
+CritAnnounceClassic.lua

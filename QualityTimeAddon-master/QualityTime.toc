@@ -1,0 +1,7 @@
+## Interface: 80100
+## Title: QualityTime
+## Author: LeftHandedGlove
+## Version: 0.1
+## SavedVariablesPerCharacter: LHG_QualityTime_Settings
+
+QualityTime.lua

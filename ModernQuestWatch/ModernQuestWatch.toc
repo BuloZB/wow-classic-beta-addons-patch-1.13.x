@@ -1,0 +1,7 @@
+## Interface: 11302
+## Version: 1.0
+## Title: Modern QuestWatch
+## Notes: Improves the Quest Watch frame
+## Author: Ketho @ EU-Boulderfist
+
+ModernQuestWatch.lua

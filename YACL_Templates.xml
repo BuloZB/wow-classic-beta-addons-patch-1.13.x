@@ -1,0 +1,134 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+    <!-- ****************************************************************  -->
+    <!--                                                                   -->
+    <!-- ****************************************************************  -->
+
+    <Frame name="YACL_FrameTemplate" hidden="true" virtual="true">
+        <Scripts>
+            <OnLoad>
+                yacl_frame_template_on_load(self);
+            </OnLoad>
+        </Scripts>
+    </Frame>
+
+    <!-- ****************************************************************  -->
+    <!--                                                                   -->
+    <!-- ****************************************************************  -->
+
+    <Frame name="YACL_MessageBoxFrame" inherits="YACL_FrameTemplate" virtual="true">
+        <Size>
+            <AbsDimension x="256" y="84"/>
+        </Size>
+        <Anchors>
+            <Anchor point="CENTER" RelativePoint="CENTER">
+                <Offset>
+                    <AbsDimension x="0" y="0"/>
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Scripts>
+            <OnLoad>
+               yacl_frame_template_on_load(self);
+            </OnLoad>
+        </Scripts>
+        <Frames>
+            <Button>
+                <Size>
+                    <AbsDimension x="108" y="32"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="10"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <ButtonText inherits="GameFontNormal" />
+                <NormalTexture inherits="UIPanelButtonUpTexture"/>
+                <PushedTexture inherits="UIPanelButtonDownTexture"/>
+                <DisabledTexture inherits="UIPanelButtonDisabledTexture"/>
+                <HighlightTexture inherits="UIPanelButtonHighlightTexture"/>
+                <Scripts>
+                    <OnLoad>
+                        self:GetParent().m_button_ok=self;
+                    </OnLoad>
+                    <OnClick>
+                        self:GetParent():Hide();
+                        if(self.m_func) then
+                           self.m_func(self.m_THIS,self.m_param1,self.m_param2);
+                        end
+                    </OnClick>
+                </Scripts>
+            </Button>
+            <Button>
+                <Size>
+                    <AbsDimension x="108" y="32"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+                        <Offset>
+                            <AbsDimension x="-10" y="10"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <ButtonText inherits="GameFontNormal" />
+                <NormalTexture inherits="UIPanelButtonUpTexture"/>
+                <PushedTexture inherits="UIPanelButtonDownTexture"/>
+                <DisabledTexture inherits="UIPanelButtonDisabledTexture"/>
+                <HighlightTexture inherits="UIPanelButtonHighlightTexture"/>
+                <Scripts>
+                    <OnLoad>
+                        self:GetParent().m_button_cancel=self;
+                    </OnLoad>
+                    <OnClick>
+                        self:GetParent():Hide();
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+        </Frames>
+    </Frame>
+
+
+    <!-- ****************************************************************  -->
+    <!--                                                                   -->
+    <!-- ****************************************************************  -->
+
+    <Frame name="YACL_CombatSliderTemplate" hidden="false" virtual ="true">
+        <Size>
+            <AbsDimension x="128" y="16"/>
+        </Size>
+        <Scripts>
+            <OnLoad>
+                yacl:on_load_slider(self);
+            </OnLoad>
+        </Scripts>
+    </Frame>
+
+    <!-- ****************************************************************  -->
+    <!-- template for checkbutton                                          -->
+    <!-- ****************************************************************  -->
+
+    <CheckButton name="YACLCheckButtonTemplate" virtual="true">
+        <Size>
+            <AbsDimension x="32" y="32"/>
+        </Size>
+        <NormalTexture    file="Interface\Buttons\UI-CheckBox-Up"/>
+        <PushedTexture    file="Interface\Buttons\UI-CheckBox-Down"/>
+        <HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD"/>
+        <CheckedTexture   file="Interface\Buttons\UI-CheckBox-Check"/>
+        <Scripts>
+            <OnEnter>
+                GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+                GameTooltip:SetText(self.ToolTipText);
+            </OnEnter>
+            <OnLeave>
+                GameTooltip:Hide();
+            </OnLeave>
+        </Scripts>
+    </CheckButton>
+
+
+</Ui>

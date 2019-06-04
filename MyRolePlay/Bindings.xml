@@ -1,0 +1,12 @@
+<Bindings>
+	<Binding name="CHARACTER_SHEET" description="Browse Target Player’s Character Profile" header="MYROLEPLAY" category="ADDONS">
+		if(UnitIsPlayer("target") == true) then
+			mrp:Show();
+		elseif(UnitIsPlayer("mouseover") == true) then
+			local name = mrp:UnitNameWithRealm("mouseover");
+			mrp:Show(name);
+		else
+			mrp:Print("You need to mouseover or target a player with an MSP addon.")
+		end;
+	</Binding>
+</Bindings>

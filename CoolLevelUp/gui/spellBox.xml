@@ -1,0 +1,23 @@
+<UI xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<Script file="spellBox.lua" /> 
+
+	<Frame name="CoolLevelUp_SpellBoxTemplate" frameStrata="DIALOG" virtual="true">
+		<Size>
+			<AbsDimension x="384" y="256"/>
+		</Size>
+		<Scripts>
+			<OnLoad>
+				CoolLevelUp.SpellBox.OnLoad(self);
+			</OnLoad>
+			<OnUpdate>
+				CoolLevelUp.SpellBox.OnUpdate(self, elapsed);
+			</OnUpdate>
+		</Scripts>
+	</Frame>
+
+	<FontString name="CoolLevelUp_TitleTextTemplate" inherits="NumberFontNormalHuge" virtual="true">
+		<Size>
+			<AbsDimension x="384" y="32"/>
+		</Size>
+	</FontString>
+</UI>

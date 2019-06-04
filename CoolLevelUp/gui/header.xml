@@ -1,0 +1,28 @@
+<UI xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<Script file="header.lua" /> 
+
+	<Frame name="CoolLevelUp_HeaderTemplate" frameStrata="DIALOG" virtual="true">
+		<Size>
+			<AbsDimension x="180" y="32"/>
+		</Size>
+		<Scripts>
+			<OnLoad>
+				CoolLevelUp.Header.OnLoad(self);
+			</OnLoad>
+			<OnUpdate>
+				CoolLevelUp.Header.OnUpdate(self, elapsed);
+			</OnUpdate>
+		</Scripts>
+	</Frame>
+
+	<FontString name="CoolLevelUp_HeaderTextTemplate" inherits="GameFontNormal" virtual="true">
+		<Size>
+			<AbsDimension x="144" y="16"/>
+		</Size>
+	</FontString>
+	<FontString name="CoolLevelUp_ValueTextTemplate" inherits="NumberFontNormal" virtual="true">
+		<Size>
+			<AbsDimension x="48" y="32"/>
+		</Size>
+	</FontString>
+</UI>

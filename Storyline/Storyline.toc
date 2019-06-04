@@ -1,0 +1,15 @@
+## Interface: 11302
+## Title: Storyline
+## Author: Ellypse and Telkostrasz
+## Version: 1.13.2.0
+## Notes: Enhanced quest storytelling
+## URL: https://www.curseforge.com/wow/addons/storyline
+## X-Website: https://www.curseforge.com/wow/addons/storyline
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: Storyline_Data
+
+## X-Curse-Project-ID: 92398
+## X-WoWI-ID: 23782
+
+ui.xml

@@ -1,0 +1,11 @@
+0.1
+Added aimed shot status bar.
+Made shot timer position save after being moved and ui reloaded.
+
+0.2
+Added /st to pull up options menu
+Added checkbox to enable/disable mouse interactivity with the shot timer bar.
+
+Known Issues:
+Push back is not being accounted for when casting aimed shot.
+Feign Death is not properly resetting shot reload timer.

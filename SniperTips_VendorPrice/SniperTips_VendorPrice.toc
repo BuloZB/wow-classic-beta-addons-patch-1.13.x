@@ -1,0 +1,8 @@
+## Interface: 80100
+## Version: 1.0.0
+## Title: SniperTips_VendorPrice
+## Author: PrivateSniper
+## Notes: Add vendor sell price to item tooltips.
+## Dependencies: Ace3, SniperTips
+
+main.lua

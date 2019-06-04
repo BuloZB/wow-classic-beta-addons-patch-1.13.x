@@ -1,0 +1,19 @@
+<UI xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<Script file="grats.lua" /> 
+
+	<Frame name="CoolLevelUp_GratsTemplate" frameStrata="DIALOG" virtual="true">
+		<Size>
+			<AbsDimension y="64"/>
+		</Size>
+		<Scripts>
+			<OnLoad>
+				CoolLevelUp.Grats.OnLoad(self);
+			</OnLoad>
+			<OnUpdate>
+				CoolLevelUp.Grats.OnUpdate(self, elapsed);
+			</OnUpdate>
+		</Scripts>
+	</Frame>
+
+	<FontString name="CoolLevelUp_GratsTextTemplate" inherits="NumberFontNormalHuge" virtual="true"/>
+</UI>

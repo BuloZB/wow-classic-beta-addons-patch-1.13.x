@@ -1,0 +1,13 @@
+## Interface: 80100
+## Title: |cffff8000Tukui Config|r
+## Notes: Tukui Config GUI
+## Author: Tukz & Hydra
+## X-Maintainer: Tukz & Azilroka
+## SavedVariables: TukuiConfigShared, TukuiConfigPerAccount
+## SavedVariablesPerCharacter: TukuiConfigNotShared
+## RequiredDeps: Tukui
+
+Tukui_Config.lua
+Locales\enUS.lua
+Locales\frFR.lua
+Locales\koKR.lua

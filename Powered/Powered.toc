@@ -1,0 +1,11 @@
+## Interface: 80100
+## Title: Powered
+## Author: Sankto / Shadosan / Navlaan-Ysera (Marc Dumoulin)
+## Notes: Power bar addon. Gives you a moveable, customizable power bar.
+## Version: 8.1.5 r1.10.0 classic compatible
+## SavedVariablesPerCharacter: PerSettings
+globs.lua
+onload.lua
+options_panel_specs.lua
+options_panel.lua
+main.lua

@@ -1,0 +1,26 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+    <Script file="YACL_grid.lua"/>
+    <Script file="YACL_vars.lua"/>
+    <Script file="YACL_debug.lua"/>
+    <Script file="YACL_frametemplate.lua"/>
+    <Script file="YACL_settingsframe.lua"/>
+    <Script file="YACL_spells.lua"/>
+    <Script file="YACL_database.lua"/>
+    <Script file="YACL_events.lua"/>
+    <Script file="YACL_fillgrid.lua"/>
+    <Script file="YACL_fillgrid_global.lua"/>
+    <Script file="YACL_fillgrid_minibars.lua"/>
+    <Script file="YACL_slashcommands.lua"/>
+    <Script file="YACL_party.lua"/>
+    <Script file="YACL_movementhooks.lua"/>
+    <Script file="YACL.lua"/>
+
+    <Include file="YACL_Templates.xml"/>
+    <Include file="YACL_Mainframe.xml"/>
+    <Include file="YACL_Optionsframe.xml"/>
+    <Include file="YACL_settingsframe.xml"/>
+
+</Ui>
+

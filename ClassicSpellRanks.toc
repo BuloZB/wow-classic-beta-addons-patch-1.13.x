@@ -1,0 +1,7 @@
+## Interface: 11302
+## Title: Classic Spell Ranks 
+## Notes: fixing the api GetSpellInfo
+## Author: Olaf Reusch
+## Version: 1.1
+
+ClassicSpellRanks.lua

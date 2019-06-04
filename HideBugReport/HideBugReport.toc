@@ -1,0 +1,10 @@
+## Interface: 11302
+## Version: 1.2
+## Title: HideBugReport
+## Notes: Toggles the Bug Report with Shift-F6 or /bug
+## Author: Ketho @ EU-Boulderfist
+## SavedVariables: HideBugReportDB
+## Dependencies: Blizzard_PTRFeedback
+
+Bindings.xml
+HideBugReport.lua

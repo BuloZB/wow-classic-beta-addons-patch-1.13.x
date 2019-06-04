@@ -1,0 +1,17 @@
+<UI xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<Script file="CoolLevelUp.lua" /> 
+
+	<Frame name="CoolLevelUpFrame" hidden="false">
+		<Scripts>	
+			<OnLoad>
+				CoolLevelUp.OnLoad(self);
+			</OnLoad>   
+			<OnEvent>
+				CoolLevelUp.OnEvent(self, event, ...);
+			</OnEvent>
+			<OnUpdate>
+				CoolLevelUp.OnUpdate(self, elapsed);
+			</OnUpdate>
+		</Scripts>
+	</Frame>
+</UI>

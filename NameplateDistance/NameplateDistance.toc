@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: NameplateDistance
+## Notes: Increases the nameplate distance.
+## Author: Wardz
+## Version: 0.0.1
+## SavedVariables: NameplateDistanceDB
+
+NameplateDistance.lua

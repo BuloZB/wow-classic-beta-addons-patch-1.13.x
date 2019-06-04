@@ -1,0 +1,130 @@
+**8.0.1 r1.9.0b**
+* Version bump.
+
+
+
+**8.0.1 r1.9.0**
+* Added a thin white border to the color pickers so that they can be more readily seen, even if you pick black.
+* Actually set the new version in the TOC file, unlike the previous release. Hopefully that did not bother anyone.
+* Adjusted the Current/%/Max labels size and position ever so slightly. They are now consistent in both.
+* The minimum length is now even shorter.
+* The skinless borders will be properly hidden after selecting a skin.
+* The thickness of the skinless borders will grow in size outwardly instead of inwardly.
+
+
+**8.0.1 r1.8.0**
+* Added an option to change the thickness of the ouline when "No skin" is selected as a border skin.
+* Using the slash commands (/pwr or /powered) will actually bring up the addon's options screen.
+* Minor adjustments.
+
+
+
+**8.0.1 r1.7.0**
+* Added one bar skin, "Inquisition".
+* Added the possibility of having a thin, colored border when "No skin" is selected as a border skin.
+* Minor code cleanups.
+
+
+
+**8.0.1 r1.6.3**
+* Increased the margin between the specialization's description and the options, to avoid overlapping.
+
+
+
+**8.0.1 r1.6.2d**
+* Version change for Battle for Azeroth.
+
+ 
+
+**7.2.0 r1.6.2c**
+* Yes, that's just a version bump.
+
+ 
+
+**7.2.0 r1.6.2b**
+* Version bump, again.
+
+ 
+
+**7.1.0 r1.6.2a**
+* Version bump.
+
+ 
+
+**7.0.3 r1.6.2**
+* Fixed another issue with scaling, where the bar wouldn't stay put.
+* Fixed a potential source of problem when loading the bar's position.
+
+ 
+
+**7.0.3 r1.6.1**
+* Fixed an error related to scaling.
+
+ 
+
+**7.0.3 r1.6.0**
+* Splitted the specializations settings into their own subcategories, under the addon's main category.
+* Moved around some settings since there is more space. Prettied it up at the same time.
+* Refactored some code, and moved a bunch of it into their own file.
+* Using the chat command to show the addon settings no longer ineffectively attempt to open the window twice, and now jump straight to your current specialization settings.
+* Changed the addon's version string to account for the game's version.
+* Added a little label next to a specialization name when it is the one currently activated.
+
+ 
+
+**1.5.3 :**
+* Fixed a bug that could cause the power bar to not show up under certain circumstances.
+
+ 
+
+**1.5.2 :**
+* Corrected some issues with the scaling feature.
+
+ 
+
+**1.5.1 :**
+* Fixed some potentially erroneous 'current power' values, in certain situations.
+
+ 
+
+**1.5 : **
+* Added a "Bar Skin" option.
+* The previous "Skin" option is now called "Border Skin".
+* Added a small preview of either skin type in their respective dropdown menu.
+
+ 
+
+**1.4 : **
+* Added a "Scale" bar.
+* Fixed some problem relative to having no skin on the power bar.
+
+ 
+
+**1.3 : **
+* Added a "Custom Bar Color" option. Once checked, click the colored square to set the color.
+
+ 
+
+**1.2.1 :**
+* Fixed the "Out of Combat" option.
+
+ 
+
+**1.2 :**
+* Added alignment settings for each labels (current power, percentage and max power).
+* Added a text box under the Length bar to precisely set the length.
+* Quite a bit of optimisations.
+* Some minor fixes.
+
+ 
+
+**1.1 :**
+* Separated several options so that each specializations can have different settings.
+* Made the options panel scrollable.
+* Added a "Length" option.
+* Some minor fixes.
+
+ 
+
+**1.0 :**
+* First Release.

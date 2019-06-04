@@ -1,0 +1,29 @@
+# Travis CI configuration file
+# http://travis-ci.org
+
+sudo: false
+
+# We use C language because it's the fastest to install on Travis CI, but we actually don't really need it
+language: c
+
+addons:
+  apt:
+    packages:
+    - luarocks
+
+install:
+  - eval $(luarocks path --bin)
+  - luarocks install --local luacheck
+
+# Run luacheck to make sure there is not syntax error left in the add-on
+script: /home/travis/.luarocks/bin/luacheck .
+
+after_failure:
+  - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
+
+cache:
+  apt: true
+  directories:
+    - $HOME/.luarocks

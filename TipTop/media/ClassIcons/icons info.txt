@@ -1,0 +1,8 @@
+Default icons in UI game files.
+
+Website icons with transparent backgrounds found on updated WoW site.
+https://worldofwarcraft.com/en-us/game/talent-calculator
+
+Textures with backgrounds by gossipgirlxo
+Flat Player Icons
+http://www.wowinterface.com/downloads/info24101-FlatPlayerIcons.html

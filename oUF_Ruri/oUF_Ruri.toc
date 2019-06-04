@@ -1,0 +1,20 @@
+## Interface: 11302
+## Title: oUF_|cff00ffffRuri|r
+## Version: C1.2
+## Author: EK (Linodas@Illidan-US)
+## Notes: Unitframes with Numberstyle nameplates.
+## RequiredDeps: oUF
+
+## Credits-to: Siweia, Paopao, Dawn, Farva
+
+Config.lua
+AuraFilterList.lua
+API.lua
+
+Tags.lua
+Core.lua
+Elements.lua
+
+Unitframes.lua
+#Raidframes.lua
+Nameplates.lua

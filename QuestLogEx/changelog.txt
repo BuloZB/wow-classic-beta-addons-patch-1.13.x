@@ -1,0 +1,10 @@
+** 1.1
+- Quest log now closes when you press "ESC" key
+
+** 1.0
+- Added quest levels and group indicator (+)
+- Fixed the minimize and close button when quest log is extended
+- Move the "EXIT" button along with the extended quest log
+
+** 0.9
+- Initial Release

@@ -1,0 +1,23 @@
+## Interface: 11302
+## Author: Loshine
+## Title: |cff777777dim|rinfo
+## Notes: Info Text Bar, Fanupdate by EK
+## Version: C1.0
+## SavedVariables: diminfo
+## X-Credits: Tukz, Katae, Loshine, DDestruction, msylgj0, Siweia
+
+init.lua
+Config.lua
+Locale.lua
+
+Modules\Positions.lua
+Modules\Time.lua
+Modules\Durability.lua
+Modules\Bags.lua
+Modules\Memory.lua
+Modules\System.lua
+Modules\Friends.lua
+Modules\Guild.lua
+#Modules\Spec.lua
+
+panel.lua

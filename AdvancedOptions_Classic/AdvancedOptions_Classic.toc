@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: Advanced Options [1.0] |c0066FF66[Classic]|r by |c0055DD55MinguasBeef|r
+## Author: |c0055DD55MinguasBeef|r
+## Version: 1.0
+## SavedVariablesPerCharacter: PA_AO_DB
+
+PUI_Include.lua
+main.lua

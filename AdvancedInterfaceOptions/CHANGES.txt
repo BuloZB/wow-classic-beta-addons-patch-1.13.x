@@ -1,0 +1,12 @@
+tag 60ca5bef45f5ab2f65e0dc02088fbf6b574478c4 1.2.10
+Author:	Benjamin Staneck <staneck@gmail.com>
+Date:	Fri May 24 23:15:25 2019 +0200
+
+Tag as 1.2.10
+
+commit 950c8dcf269fc63f79b31c14ec14193ac9b62ec9
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Fri May 24 23:14:53 2019 +0200
+
+    don't show bag sort option on classic WoW
+

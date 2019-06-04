@@ -1,0 +1,50 @@
+## Interface: 80100
+## Title: Sellable Item Drops
+## Notes: Logging your sellable item drops with location, time and market value.
+## Notes-deDE: Merkt sich alle erbeuteten und verkaufbaren Gegenstände mit Zeitpunkt, Ort und Marktwert
+## Author: Caraxe/Expelliarmuuuuus
+## Version: 0.4.9
+## SavedVariables: SellableItemDropsDB
+## Dependencies:
+## OptionalDeps: TradeSkillMaster, TradeSkillMaster_AppHelper, TheUndermineJournal, Auctionator, CanIMogIt
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+
+Libs\AceAddon-3.0\AceAddon-3.0.xml
+Libs\AceConsole-3.0\AceConsole-3.0.xml
+Libs\AceLocale-3.0\AceLocale-3.0.xml
+Libs\AceEvent-3.0\AceEvent-3.0.xml
+Libs\AceHook-3.0\AceHook-3.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
+
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibParse\Load.xml
+
+Widgets\SIDFrame.lua
+Widgets\SIDTabGroup.lua
+Widgets\SIDData.lua
+Widgets\SIDInlineGroup.lua
+Widgets\SIDEditBox.lua
+Widgets\SIDnil.lua
+
+Locale\enUS.lua
+Locale\deDE.lua
+
+SellableItemDrops.lua
+Changelog.lua
+
+Modules\PFCH.lua
+Modules\PFCH_Data.lua
+Modules\Options.lua
+Modules\LDB.lua
+Modules\Item.lua
+Modules\Data.lua
+Modules\GUI.lua
+
+## EOF

@@ -1,0 +1,7 @@
+<Bindings>
+	<Binding name="Toggle Bug Report" category="PTR" default="SHIFT-F6">
+		local db = HideBugReportDB
+		db.hide = not db.hide
+		PTR_IssueReporter[db.hide and "Hide" or "Show"](PTR_IssueReporter)
+	</Binding>
+</Bindings>

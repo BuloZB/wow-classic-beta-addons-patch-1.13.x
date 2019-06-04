@@ -1,0 +1,24 @@
+## Interface: 11302
+## Title: ShestakUI (Classic) Config
+## Notes: In-game configuration for ShestakUI
+## Author: Haleth, Solor
+## Version: 0.52
+## RequiredDeps: ShestakUI
+## SavedVariables: ShestakUIOptionsGlobal, ShestakUIOptions
+## SavedVariablesPerCharacter: ShestakUIOptionsPerChar
+
+## X-Website: http://shestak.org
+## X-Thanks: Tryllemann, Wetxius
+
+Core.lua
+
+Locales\English.lua
+Locales\Chinese.lua
+Locales\French.lua
+Locales\German.lua
+Locales\Italian.lua
+Locales\Russian.lua
+Locales\Spanish.lua
+Locales\Taiwan.lua
+
+Options.lua

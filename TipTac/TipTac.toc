@@ -1,0 +1,12 @@
+## Interface: 11302
+## Version: 19.03.31
+## Title: TipTac Classic
+## Author: Aezay (Earthen Ring EU)
+## Notes: Highly Customizable Tooltip Enhancement Addon (Classic fix by DaMaGepy)
+## SavedVariables: TipTac_Config
+ttCore.lua
+ttStyle.lua
+ttBars.lua
+ttAuras.lua
+ttIcons.lua
+ttHyperlink.lua
